@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link
+            href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet">
+    <style>
+        /*web background*/
+        .container {
+            display: table;
+            height: 100%;
+        }
+    </style>
+    <title>租房页面</title>
+</head>
+<body>
+<div class="container">
+
+    你已发送租房信息，<a th:href="@{'/student/msg/'+${studentid}}">点击查看详细信息</a>
+    <!--<h1>房屋信息</h1>-->
+    <!--<table border="1">-->
+        <!--<tr>-->
+
+            <!--<th>地址</th>-->
+            <!--<th>详情</th>-->
+            <!--<th>价格</th>-->
+            <!--<th>类型</th>-->
+            <!--<th>人数</th>-->
+            <!--&lt;!&ndash;<th>房屋ID</th>&ndash;&gt;-->
+            <!--<th>发表时间</th>-->
+        <!--</tr>-->
+        <!--<tr th:each="house:${house}">-->
+            <!--<td th:text="${house.address}">地址</td>-->
+            <!--<td th:text="${house.detail}">详情</td>-->
+            <!--<td th:text="${house.price}">价格</td>-->
+            <!--&lt;!&ndash;<td th:text="${house.id}">房屋ID</td>&ndash;&gt;-->
+            <!--<td th:text="${house.type}">类型</td>-->
+            <!--<td th:text="${house.pnum}">人数</td>-->
+            <!--<td th:text="${house.postTime}">发送时间</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+    <!--<h1>房主联系方式</h1>-->
+    <!--<table class="table">-->
+        <!--<thead>-->
+        <!--<tr><td colspan="2">用户信息</td></tr>-->
+        <!--</thead>-->
+        <!--<tr><td>用户名：</td><td th:text="${user.userName}">用户名</td></tr>-->
+        <!--<tr><td>地址：</td><td th:text="${user.address}">地址</td></tr>-->
+        <!--<tr><td>电话：</td><td th:text="${user.phone}">电话</td></tr>-->
+    <!--</table>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link
+            href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet">
+
+    <title>用户信息</title>
+</head>
+<body>
+<div class="container col-md-12">
+    <table class="table">
+        <thead>
+        <tr><td colspan="2">用户信息</td></tr>
+        </thead>
+        <tr><td>用户名：</td><td th:text="${student.userName}">用户名</td></tr>
+        <tr><td>地址：</td><td th:text="${student.address}">地址</td></tr>
+        <tr><td>电话：</td><td th:text="${student.phone}">电话</td></tr>
+        <tr><td>性别：</td><td th:text="${student.sex}">性别</td></tr>
+        <tr><td>出生年月：</td><td th:text="${student.birthday}">性别</td></tr>
+    </table>
+    <a th:href="@{'/house/all/'+${student.userName}+'/'+${student.id}}">我要租房</a>
+    <br>
+    <a th:href="@{'/student/msg/'+${student.id}}">查看消息</a>
+    <br>
+    <a th:href="@{/student/login}">重新登陆</a>
+</div>
+</body>
+</html>

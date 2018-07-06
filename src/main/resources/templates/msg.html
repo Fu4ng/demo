@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link
+            href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet">
+    <style>
+        /*web background*/
+        .container {
+            display: table;
+            height: 100%;
+        }
+    </style>
+    <title>我的消息列表</title>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-6 col-offset-3">
+        <h1>我出租的消息列表</h1>
+        <table border="1">
+            <tr>
+                <th>消息序号</th>
+                <th>房主id</th>
+                <th>学生id</th>
+                <th>房屋id</th>
+                <th>见面地址</th>
+                <th>见面时间</th>
+                <!--<th>房屋ID</th>-->
+
+            </tr>
+            <tr th:each="msg:${msgList}">
+                <td th:text="${msgStat.index}+1">编号</td>
+                <td th:text="${msg.userid}">房主id</td>
+                <td th:text="${msg.stuid}">学生id</td>
+                <td th:text="${msg.houseid}">房屋id</td>
+                <!--<td th:text="${house.id}">房屋ID</td>-->
+                <td th:text="${msg.address}">见面地址</td>
+                <td th:text="${msg.posttime}">见面时间</td>
+                <!--<td><a th:href="@{'/house/delete/'+${house.id}}">下架</a></td>-->
+                <!--<td><a th:href="@{'/house/'+${userName}+'/'+${house.id}}">修改信息</a> </td>-->
+            </tr>
+        </table>
+        <!--<a th:href="@{'/user/'+${userName}}">返回</a>-->
+        <!--<a th:href="@{'/house/r/'+${userName}+'/'+${userid}}">我要出租房屋</a>-->
+    </div>
+</div>
+</body>
+</html>
